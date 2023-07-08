@@ -27,6 +27,6 @@ The circuit requires these components to be soldered on their locations on the P
 
 ## Designed Board Pictures
 
-![Top of the Board](/Images/Top_Side.png "Top Side")
-![Bottom of the Board](/Images/Bottom_Side.png "Bottom Side")
-![3D View of the PCB](/Images/3D.png "3D View")
+![Top of the Board](/PCB/Images/Top_Side.png "Top Side")
+![Bottom of the Board](/PCB/Images/Bottom_Side.png "Bottom Side")
+![3D View of the PCB](/PCB/Images/3D.png "3D View")

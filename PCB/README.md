@@ -4,7 +4,7 @@ The Circuit Board used in the project is made so that the built robot can be act
 
 The Project is designed so that the system can be powered using 2S Li-ion batteries. To charge these batteries with balance, external 2S Battery Management System (BMS) circuit can be used and can be connected to designed board using "BMS" socket on it.
 
-PCB design is created on EasyEDA. The complete schematic and layout files for both Altium Designer and EasyEDA are located on their subsequent folders. 
+PCB design is created on EasyEDA. The complete schematic and layout files for both Altium Designer and EasyEDA are located on their subsequent folders. You can also find PDF file for the schematics.
 
 If you want to direct order the PCB without making any changes, you can use the Gerber files.
 

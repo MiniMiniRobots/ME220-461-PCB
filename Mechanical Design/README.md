@@ -5,4 +5,4 @@ Mechanical design for the MiniMiniRobots project consists of several individual 
 
 ## 3D CAD Model Images
 
-![Assembly](/Images/Assembly.png "Assembly")
+![Assembly](/Mechanical&#32;Design/Images/Assembly.png "Assembly")

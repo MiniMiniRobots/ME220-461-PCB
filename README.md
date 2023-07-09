@@ -2,6 +2,8 @@
 
 MiniMiniRobots is a small robot project with custom made mechanical parts and a PCB. It is made in Spring Semester of 2023 as a part of ME462 - Mechatronics Design course in Middle East Technical University, Turkey. The collaborators for this Project are Emir Bahadir Unsal, Mert Kerem Ulku, Yusuf Onat Yilmaz, Musa Doruk Ucar, Abdulkadir Saritepe and Burak Arslan. The project is under MIT License. 
 
+![The Robot](/Media/alpha.png "Assembly")
+
 The whole project can be considered under several sub-parts.
 
 ## Electronics

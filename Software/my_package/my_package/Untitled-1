@@ -1,0 +1,153 @@
+import network
+import socket
+from time import sleep
+from machine import Pin
+
+def connect():
+    #Connect to WLAN
+    wlan = network.WLAN(network.STA_IF)
+    wlan.active(True)
+    wlan.connect(ssid, password)
+    while wlan.isconnected() == False:
+        print('Waiting for connection...')
+        sleep(1)
+    ip = wlan.ifconfig()[0]
+    print(f'Connected on {ip}')
+    pico_led.on()
+    sleep(5)
+    pico_led.off()
+    sleep(5)
+    
+    return ip
+
+def open_socket(ip):
+    # Open a socket
+    address = (ip, 8000)
+    connection = socket.socket()
+    connection.bind(address)
+    connection.listen(1)
+    print(connection)
+    return connection
+
+def webpage(state, temperature):
+    #Template HTML
+    html = f"""
+            <!DOCTYPE html>
+            <html>
+            <body>
+
+            <p>LED is {state}</p>
+            <p>Temperature is {temperature}</p>
+
+
+            <form action="./lighton">
+            <input type="submit" value="Light on" />
+            </form>
+
+
+            <form action="./lightoff">
+            <input type="submit" value="Light off" />
+            </form>
+
+
+            </body>
+            </html>
+            """
+    return str(html)
+
+def serve(connection):
+    #Start a web server
+    state = 'OFF'
+    pico_led.off()
+    temperature = 0
+    while True:
+        client, addr = connection.accept()
+        print("Connected by", addr)
+        while True:
+            data = client.recv(2048).decode().strip()
+            print(data)
+            if data == "b":
+                pico_led.on()
+                sleep(0.5)
+                pico_led.off()
+                sleep(0.5)
+                client.send("Mini robot is going straight\r\n")
+                while True:
+                    for step in full_step_sequence:
+                        for i in range(len(pins)):
+                            pins[i].value(step[i])
+                            pins2[i].value(step[i])
+                            sleep(0.0015)
+                    
+            elif data == "b":
+                client.send("Mini robot is going straight\r\n")
+                while True:
+                    for step in full_step_sequence_b:
+                        for i in range(len(pins)):
+                            pins[i].value(step[i])
+                            pins2[i].value(step[i])
+                            sleep(0.0015)
+                    
+            elif data == "r":
+                client.send("Mini robot is going straight\r\n")
+                while True:
+                    for step in full_step_sequence:
+                        for i in range(len(pins)):
+                            pins[i].value(step[i])
+                            pins2[i].value([0,0,0,0])
+                            sleep(0.0015)
+                    
+            elif data == "l":
+                client.send("Mini robot is going straight\r\n")
+                while True:
+                    for step in full_step_sequence:
+                        for i in range(len(pins)):
+                            pins[i].value([0,0,0,0])
+                            pins2[i].value(step[i])
+                            sleep(0.0015)
+                    
+            else:
+                client.send("YOU TYPED A MEANINGLESS BUTTON\r\n")
+        client.close()
+
+
+
+
+if _name_ == "_main_":
+
+    ssid = 'musa2000'
+    password = 'musa2000'
+    
+    pins = [
+        Pin(26, Pin.OUT),
+        Pin(22, Pin.OUT),
+        Pin(21, Pin.OUT),
+        Pin(20, Pin.OUT),
+        ]
+    pins2 = [
+        Pin(19, Pin.OUT),
+        Pin(18, Pin.OUT),
+        Pin(17, Pin.OUT),
+        Pin(16, Pin.OUT),
+        ]
+    full_step_sequence = [
+        [1,0,0,0],
+        [0,1,0,0],
+        [0,0,1,0],
+        [0,0,0,1],
+        ]
+    full_step_sequence_b = [
+        [0,0,0,1],
+        [0,0,1,0],
+        [0,1,0,0],
+        [1,0,0,0],
+        ]
+    
+    pico_led = Pin("LED", Pin.OUT)
+
+    try:
+        ip = connect()
+        connection = open_socket(ip)
+        serve(connection)
+    except KeyboardInterrupt:
+        machine.reset()

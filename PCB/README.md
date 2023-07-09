@@ -13,7 +13,7 @@ If you want to direct order the PCB without making any changes, you can use the 
 The circuit requires these components to be soldered on their locations on the PCB in order to be function.
 - 2 x 20kΩ Resistors
 - 2 x 10kΩ Resistors
-- 2 x Capacitors
+- 2 x 16V 10µF Capacitors 
 - LM2596 Step-down Voltage Regulator (should be adjusted so that output should be 5V)
 - 2-pin Dip Switch
 - 4 x 2-pin JST XH2.54 female connectors

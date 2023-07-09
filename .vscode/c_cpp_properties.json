@@ -1,0 +1,25 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/opt/ros/noetic/include/**",
+        "/home/barslan/ros_ws/devel/include/**",
+        "/home/barslan/cercop/ros1_beg_ws/src/beg_tutorials/include/**",
+        "/home/barslan/ros_ws/src/learning_tf2/include/**",
+        "/home/barslan/ros_ws/src/m113_perception/include/**",
+        "/home/barslan/ros_ws/src/patchwork-plusplus-ros/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

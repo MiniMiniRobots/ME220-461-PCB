@@ -1,16 +1,19 @@
-# MiniMiniRobots PCB Design
+# PCB Design for ME220 and ME461 Courses
 
-The Circuit Board used in the project is made so that the built robot can be actuated with both Stepper and/or DC motors. The Board also have connectors required to connect OLED screen, Neopixel LED's etc. 
+The repository is created for the PCB circuits used in ME220 and ME461 lectures which are offered in Middle East Technical University in Turkey in Fall 2023 term. The main circuit is firstly made for the MiniMiniRobots project, which this repository is forked from.
 
-The Project is designed so that the system can be powered using 2S Li-ion batteries. To charge these batteries with balance, external 2S Battery Management System (BMS) circuit can be used and can be connected to designed board using "BMS" socket on it.
+The main circuit board is made so that this PCB can be used for controlling both Stepper and/or DC motors. The board also have connectorys required to connect OLED screen, Neopixel LED's etc.
 
-PCB design is created on EasyEDA. The complete schematic and layout files for both Altium Designer and EasyEDA are located on their subsequent folders. You can also find PDF file for the schematics.
+The main board is designed for using 5V as main supply but it has Step-down Voltage Regulator so that it can be powered with higher voltages between 5-35V. The board can also be supplied with batteries, which was a requirement for the MiniMiniRobots project, thus it has BMS socket on it.
+
+PCB designs are created on EasyEDA. The complete schematic and layout files for both Altium Designer and EasyEDA are located on their subsequent folders. You can also find PDF file for the schematics.
 
 If you want to direct order the PCB without making any changes, you can use the Gerber files.
 
 ## Components on the PCB
 
-The circuit requires these components to be soldered on their locations on the PCB in order to be function.
+### The Main Circuit
+The main circuit requires these components to be soldered on their locations on the PCB in order to be function.
 - 2 x 20kΩ Resistors
 - 2 x 10kΩ Resistors
 - 2 x 16V 10µF Capacitors 
@@ -25,8 +28,19 @@ The circuit requires these components to be soldered on their locations on the P
 - 3 x 1x20 Female Header (2.54mm)
 - 1 x Raspberry Pi Pico W
 
+### The Tranfer Circuit
+The transfer circuit only requires these components to be soldered on their locations on it in order to be function.
+- 2 x 1x20 Female Header (2.54mm)
+- 1 x 5mm LED
+- 1 x 220Ω Resistor
+
 ## Designed Board Pictures
 
-![Top of the Board](/PCB/Images/Top_Side.png "Top Side")
-![Bottom of the Board](/PCB/Images/Bottom_Side.png "Bottom Side")
-![3D View of the PCB](/PCB/Images/3D.png "3D View")
+![Top of the Main Board](/Images/Top_Side.png "Top Side")
+![Bottom of the Main Board](/Images/Bottom_Side.png "Bottom Side")
+![3D View of the Main PCB](/Images/3D.png "3D View")
+
+![Top of the Transfer Board](/Images/Top_Side.png "Top Side")
+![Bottom of the Transfer Board](/Images/Bottom_Side.png "Bottom Side")
+![3D View of the Transfer PCB](/Images/3D.png "3D View")
+

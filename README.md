@@ -1,28 +1,32 @@
-# MiniMiniRobots
+# MiniMiniRobots PCB Design
 
-MiniMiniRobots is a small robot project with custom made mechanical parts and a PCB. It is made in Spring Semester of 2023 as a part of ME462 - Mechatronics Design course in Middle East Technical University, Turkey. The collaborators for this Project are Emir Bahadir Unsal, Mert Kerem Ulku, Yusuf Onat Yilmaz, Musa Doruk Ucar, Abdulkadir Saritepe and Burak Arslan. The project is under MIT License. 
+The Circuit Board used in the project is made so that the built robot can be actuated with both Stepper and/or DC motors. The Board also have connectors required to connect OLED screen, Neopixel LED's etc. 
 
-![The Robot](/Media/alpha.png "Assembly")
+The Project is designed so that the system can be powered using 2S Li-ion batteries. To charge these batteries with balance, external 2S Battery Management System (BMS) circuit can be used and can be connected to designed board using "BMS" socket on it.
 
-The whole project can be considered under several sub-parts.
+PCB design is created on EasyEDA. The complete schematic and layout files for both Altium Designer and EasyEDA are located on their subsequent folders. You can also find PDF file for the schematics.
 
-## Electronics
+If you want to direct order the PCB without making any changes, you can use the Gerber files.
 
-The project is built on a custom-made PCB circuit and several small circuit boards. A Breadboard is attached on the robot so that additional electronics can be added. 
+## Components on the PCB
 
-### PCB Design
+The circuit requires these components to be soldered on their locations on the PCB in order to be function.
+- 2 x 20kΩ Resistors
+- 2 x 10kΩ Resistors
+- 2 x 16V 10µF Capacitors 
+- LM2596 Step-down Voltage Regulator (should be adjusted so that output should be 5V)
+- 2-pin Dip Switch
+- 4 x 2-pin JST XH2.54 female connectors
+- 1 x 3-pin JST XH2.54 female connectors
+- 2 x 5-pin JST XH2.54 female connectors
+- 1 x L239D Motor Driver Integrated Circuit
+- 2 x ULN2003A Stepper Motor Driver Integrated Circuit
+- 1 x 2 pin Push Button
+- 3 x 1x20 Female Header (2.54mm)
+- 1 x Raspberry Pi Pico W
 
-PCB design files and their details can be found under "PCB" folder. The left part of the PCB has 1x20 female headers that is not used by default. With these extra headers, additional circuitry can be connected to it.
+## Designed Board Pictures
 
-### Powering
-
-The system can be powered using 2S battery. For charging the batteries with balance, a Battery Management System circuit is suggested. The BMS can be connected to the PCB board and this connection can be used to detect charging. 
-
-## Mechanical Design
-
-Mechanical parts and the assembly file can be found under "Mechanical Design" folder. All of the parts can be manufactured using a 3D Printer. Top part of the design can be used for putting Breadboard or any other circuit boards. Back part can be used for charging with the Charging Station.
-
-## Charging Station
-
-The "Charging Station" part is used for Wireless Charging Station stage. It can be used coated with aluminum foil with attached on a ground coated with aluminum foil. 
-For the station to be powered, 8.4V voltage is required for robots with 2S battery. To achieve this voltage, an adjustable power supply or a fixed ac-dc power supply with a voltage regulator can be used. 
+![Top of the Board](/PCB/Images/Top_Side.png "Top Side")
+![Bottom of the Board](/PCB/Images/Bottom_Side.png "Bottom Side")
+![3D View of the PCB](/PCB/Images/3D.png "3D View")

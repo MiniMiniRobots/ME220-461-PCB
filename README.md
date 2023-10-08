@@ -36,11 +36,12 @@ The transfer circuit only requires these components to be soldered on their loca
 
 ## Designed Board Pictures
 
+### The Main Circuit
 ![Top of the Main Board](/Images/Top_Side.png "Top Side")
 ![Bottom of the Main Board](/Images/Bottom_Side.png "Bottom Side")
 ![3D View of the Main PCB](/Images/3D.png "3D View")
 
-![Top of the Transfer Board](/Images/Top_Side.png "Top Side")
-![Bottom of the Transfer Board](/Images/Bottom_Side.png "Bottom Side")
-![3D View of the Transfer PCB](/Images/3D.png "3D View")
+## The Transfer Circuit
+![Bottom of the Transfer Board](/Images/Bottom_Side_Transfer.png "Bottom Side")
+![3D View of the Transfer PCB](/Images/3D_Transfer.png "3D View")
 

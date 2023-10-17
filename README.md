@@ -14,25 +14,33 @@ If you want to direct order the PCB without making any changes, you can use the 
 
 ### The Main Circuit
 The main circuit requires these components to be soldered on their locations on the PCB in order to be function.
-- 2 x 20kΩ Resistors
-- 2 x 10kΩ Resistors
-- 2 x 16V 10µF Capacitors 
-- LM2596 Step-down Voltage Regulator (should be adjusted so that output should be 5V)
-- 2-pin Dip Switch
-- 4 x 2-pin JST XH2.54 female connectors
-- 1 x 3-pin JST XH2.54 female connectors
-- 2 x 5-pin JST XH2.54 female connectors
-- 1 x L239D Motor Driver Integrated Circuit
-- 2 x ULN2003A Stepper Motor Driver Integrated Circuit
-- 1 x 2 pin Push Button
-- 3 x 1x20 Female Header (2.54mm)
-- 1 x Raspberry Pi Pico W
 
-### The Tranfer Circuit
+| Type of the Component | Details | Notes  |
+|-----------------------|-----------------------|---------------|
+| Resistors     | Depends on the Connected Devices | Read [Usage](/Usage.md) file for finding the required resistances |
+| Capacitors      | 2 x 16V 10µF  | Needs to be Electrolytic (cylindrical) to fit their locations on the PCB  |
+| Voltage Regulator | LM2596 Step-Down  | There is 2 regulator with different dimensions, its dimensions should be 43x21x14 $mm^3$ to fit to PCB  |
+| JST XH2.54 Male Connectors | 4 x 2-Pin, 1 x 3-Pin, 2 x 5-Pin  | Male Connectors should be soldered to PCB |
+| DC Motor Driver | L293D DIP-16 Driver | Do not forget to solder 2 x 6-Pin female 2.54mm headers first|
+| Stepper Motor Driver | ULN2003A DIP-16 Driver | The driver which comes with the  28BYJ-48 Stepper Motor Set can be used on the circuit |
+| Push Button | 2-pin Tact Button  | Can be used to reset the Pico without disconnecting the power source |
+| Dip Switch | 2 Pin Dip Switch | Both of the should be on to pass the power |
+| Female Headers | 3 x 1x20, 6 x 1x6 2.54mm | 1x20 female headers can be broken to obtain 1x6 headers |
+| Microcontroller Circuit | Rasppberry Pi Pico W | Raspberry Pi Pico can also be used with this circuit but in ME220 and ME461, Pico W is used |
+
+
+### The Transfer Circuit
 The transfer circuit only requires these components to be soldered on their locations on it in order to be function.
-- 2 x 1x20 Female Header (2.54mm)
-- 1 x 5mm LED
-- 1 x 220Ω Resistor
+
+| Type of the Component | Details | Notes  |
+|-----------------------|-----------------------|---------------|
+| Female Header     | 2 x 1x20 2.54mm | Advising soldering the headers such that the `Middle East Technical University` text stays on the top such that one can read the name of the pins while using the circuits. |
+| LED      | 1 x 5mm  | Shows if the transfer circuit is powered or not  |
+| Resistor | 1 x 220Ω  | Needed for lowering the current passing on the power LED 
+
+While preparing the circuits for usage, please refer [Usage of the Circuits](/Usage.md).
+
+For more detailed explanation for each component on the circuits, one can refer to [Explanation of the Components](/Usage.md).
 
 ## Designed Board Pictures
 

@@ -40,7 +40,7 @@ The transfer circuit only requires these components to be soldered on their loca
 
 While preparing the circuits for usage, please refer [Usage of the Circuits](/Usage.md).
 
-For more detailed explanation for each component on the circuits, one can refer to [Explanation of the Components](/Usage.md).
+For more detailed explanation for each component on the circuits, one can refer to [Explanation of the Components](/Explanation.md).
 
 ## Designed Board Pictures
 

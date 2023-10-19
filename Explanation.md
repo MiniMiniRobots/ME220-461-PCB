@@ -22,6 +22,8 @@
 | Raspberry Pi Pico W | Microcontroller Board | Microcontroller Board which controls the whole circuit |
 | NeoPixel | 3 Pin JST XH2.54 Male Connector     | Connects LED Strip to the circuit |
 
+If one wants to use the resistors for voltage reading for BMS or Power level, a voltage divider planning should me made. For more detailed explanation for voltage divider, one can refer [here](https://www.allaboutcircuits.com/tools/voltage-divider-calculator/). The current passing through the resistors should also be considered while finding the required resistance values since the Raspberry Pi Pico cannot handle current values more than 16mA per pin (max 51mA total). Advising that choosing resistors such that the current passing through the resistors are at most 1mA or less. 
+
 For the schematic of the Main Circuit, [Main Circuit Schematic](/Schematic_MiniMiniRobots.pdf)
 
 ## Transfer Circuit
